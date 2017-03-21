@@ -1,0 +1,10 @@
+$color: #000;
+$font-family:sans-serif;
+$margin:30px;
+
+h2{
+	color: $color;
+	font-family: $font-family;
+	margin-top: $margin;
+}
+@import "header";

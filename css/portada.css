@@ -1,0 +1,10 @@
+.portada{
+	background-image:url(http://cde.peru21.pe/ima/0/0/2/6/3/263427.jpg);
+	position: absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	display: none;
+	opacity:1;
+}
