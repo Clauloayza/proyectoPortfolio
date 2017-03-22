@@ -4,8 +4,8 @@ h2 {
   margin-top: 30px; }
 
 h1 {
-  color: #ccc;
-  font-size: 2px; }
+  color: #000;
+  font-size: 20px; }
 
 .navbar{
     padding-bottom: 12px;
@@ -24,7 +24,7 @@ section
 	top:0;
 	left:0;
 	display: none;
-	opacity:0.3;
+	opacity:0.8;
     
 }
 
@@ -36,7 +36,7 @@ section
 
 .content
 {
-	background: rgba(0, 0, 0, 0.1);
+	background: #fff;
 	display:table-cell;
 	vertical-align: middle;
 }

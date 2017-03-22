@@ -4,20 +4,35 @@ var currentSection = null;
 
 function init()
 {
-	currentSection = $('#saludo');
+	currentSection = $('#home');
+	$('#btn-home').click(onClickHome);
 	$('#btn-aboutMe').click(onClickAboutMe);
-	$('#btn-skills').click(onClickBtnSkills);
+	$('#btn-skills').click(onClickSkills);
+	$('#btn-portfolio').click(onClickPortfolio);
+	$('#btn-contact').click(onClickContact);
     
 
-	TweenMax.from($('#boutMe h1'), 1, {marginBottom:'0px', ease:Elastic.easeOut});
+	TweenMax.from($('#aboutMe h1'), 1, {marginBottom:'0px', ease:Elastic.easeOut});
 }
 
-function onClickBtnAboutMe() {
-	gotoSection('boutMe');
+function onClickHome(){
+	gotoSection('home');
 }
 
-function onClickBtnSkills() {
+function onClickAboutMe() {
+	gotoSection('aboutMe');
+}
+
+function onClickSkills() {
 	gotoSection('skills');
+}
+
+function onClickPortfolio(){
+	gotoSection('portfolio');
+}
+
+function onClickContact(){
+	gotoSection('contact');
 }
 
 function gotoSection(_identificadorDeSeccion)
