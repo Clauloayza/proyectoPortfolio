@@ -1,34 +1,40 @@
+.corusel{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+}
 .content .main
 {
-	width: 90%;
+	width: 100%;
 	max-width: 1000px;
     
 }
 
 .slides{
     width: 100%;
-}
-
-.slides img{
+  img{
     width: 100%;
+  }
 }
 
 .slidesjs-pagination{
     background: #424242;
     list-style: none;
     overflow: hidden;
+	li{
+		float: left;
+		a{
+			 display: block;
+		     padding: 10px 20px;
+		     color: #fff;
+		     text-decoration: none;
+		}
+	}
 }
 
-.slidesjs-pagination li{
-    float: left;
-    
-}
-.slidesjs-pagination li a{
-    display: block;
-    padding: 10px 20px;
-    color: #fff;
-    text-decoration: none;
-}
 .slidesjs-pagination li a:hover{
     background: #000;
     
