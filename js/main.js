@@ -16,8 +16,23 @@ function init()
 }
 
 function onClickHome(){
+    
 	gotoSection('home');
 }
+
+$(function(){
+  $(".slides").slidesjs({
+    play: {
+      active: true,
+      effect: "slide",
+      interval: 3000,
+      auto: true,
+      swap: true,
+      pauseOnHover: false,
+      restartDelay: 2500
+    }
+  });
+});
 
 function onClickAboutMe() {
 	gotoSection('aboutMe');
@@ -35,12 +50,12 @@ function onClickContact(){
 	gotoSection('contact');
 }
 
-function gotoSection(_identificadorDeSeccion)
+function gotoSection(_identificador)
 {
 	currentSection.removeClass('visible');
-	var nextSection = $('#'+_identificadorDeSeccion);
+	var nextSection = $('#'+_identificador);
 
 	nextSection.addClass('visible');
-
+    currentSection = nextSection;
 	
 }
