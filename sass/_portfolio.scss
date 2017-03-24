@@ -1,0 +1,27 @@
+#portfolio {
+    width:100%;
+}
+
+.tile {
+    float:left;
+    min-height:auto;
+    width:30%; 
+    border:1px #fff solid;
+}
+
+.tile:hover { 
+    opacity: 0.5;
+    background-position: center;
+}
+
+.web { 
+    background:rgba(255, 255, 255, 0.76);
+}
+
+.flyers {
+    background: #000000;
+}
+
+.bcards {
+    background: #ffffff; 
+}
