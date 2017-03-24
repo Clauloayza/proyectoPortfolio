@@ -131,6 +131,46 @@ h4 {
   float: right; }
 
 /*---------->ABOUT ME*/
+#pAbout{
+    margin-bottom: 30px;
+}
 
+/*---------->portfolio*/
+.containerPort{
+    height: 100%;
+    overflow: hidden;
+}
 
+@keyframes start{
+    from{
+        transform: scale(0);
+    }   
+    to {
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes start {
+    from{
+        -webkit-transform: scale(0);
+    }
+    to {
+        -webkit-transform: scale(1);
+    }
+}
+
+.free-wall .brick[data-state="init"]{
+    display: none;
+}
+
+.free-wall .brick[data-stte="start"]{
+    display: block;
+    animation: start 0.5s;
+    -webkit-animation: atrt 0.5s;
+}
+/*/gestionados por jquery*/
+.free-wall .brick[data-state="move"]{
+    transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s;
+    -webkit-transition: top 0.5s, left 0.5s, width 0.5s, height 0.5s;
+}
 /*# sourceMappingURL=main.css.map */

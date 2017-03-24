@@ -46,6 +46,43 @@ function onClickPortfolio(){
 	gotoSection('portfolio');
 }
 
+var colour = [
+    "rgba(226, 169, 169, 0.67)",
+    "rgba(169, 226, 224, 0.67)",
+    "rgba(219, 223, 226, 0.79)",
+    "rgba(167, 228, 250, 0.79)",
+    "rgba(195, 195, 195, 0.67)",
+    "rgba(229, 223, 202, 0.67)",
+    "rgba(231, 207, 245, 0.67)",
+    "rgba(207, 245, 235, 0.67)",
+    "rgba(227, 188, 223, 0.67)",
+    "rgba(229, 223, 202, 0.67)",  
+];
+
+//para que los bloques tomen form segun aplicativo :3
+$(".free-wall .brick").each(function(){
+    this.style.backgroundColor = colour[colour.length * Math.random()<<0]
+});
+
+//opciones y eventos como onresize que direccion el tmaño del servidor de freewall que pasaremos como parametros
+$(function(){
+    var wall = new free-wall('free-wall');
+    wall.reset({
+        selector: '.brick',
+        animate:false,
+        cell:{
+            width:160,
+            height: 160,
+        },
+        delay:30,
+        onResize:function(){
+            wall.fitZone($(window).outerWidth() - 20, $(window).outerHeight() - 20);
+            
+        }
+    })
+    wall.fitZone($(window).outerWidth() - 20, $(window).outerHeight() - 20)
+  });
+
 function onClickContact(){
 	gotoSection('contact');
 }
