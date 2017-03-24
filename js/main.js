@@ -36,17 +36,64 @@ $(function(){
 
 function onClickAboutMe() {
 	gotoSection('aboutMe');
+    $('#aboutMe').click(function(){
+    var texto = $('#text-animation');
+    texto.animate({right:'700px', opacity:'0.4'}, "slow");
+});
+    
 }
+
+
 
 function onClickSkills() {
 	gotoSection('skills');
+    
+    var options = {
+        percentageInnerCutout: 70,
+        animationEasing:'easeOutQuint',
+        animateScale:true
+    };
+    
+    var data ={
+       html_css: [
+    { value: 95, color: "hsl(120, 39%, 54%)" },
+    { value: 5, color: "hsl(120, 10%, 90%)" }
+  ],
+    };
+    
+    var offset = 0;
+        $.each(data, function(key, data) {
+            var canvas = document.querySelector('#' + key);
+            if(canvas) {
+                offset += 250;
+                setTimeout(function() {
+                    var ctx = canvas.getContext('2d');
+                    var chart = new Chart(ctx);
+                    chart.Doughnut(data, options);
+                }, offset);
+            }
+        });
 }
 
 function onClickPortfolio(){
 	gotoSection('portfolio');
+    
+    
 }
-
-var colour = [
+$(function() {
+		var selectedClass = "";
+		$("p").click(function(){
+		selectedClass = $(this).attr("data-rel");
+    $("#portfolio").fadeTo(100, 0.1);
+		$("#portfolio div").not("."+selectedClass).fadeOut();
+    setTimeout(function() {
+      $("."+selectedClass).fadeIn();
+      $("#portfolio").fadeTo(500, 1);
+    }, 500);
+		
+	});
+});
+/*var colour = [
     "rgba(226, 169, 169, 0.67)",
     "rgba(169, 226, 224, 0.67)",
     "rgba(219, 223, 226, 0.79)",
@@ -81,7 +128,7 @@ $(function(){
         }
     })
     wall.fitZone($(window).outerWidth() - 20, $(window).outerHeight() - 20)
-  });
+  });*/
 
 function onClickContact(){
 	gotoSection('contact');
