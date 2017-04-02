@@ -198,4 +198,40 @@ ul, li, a {
   font-family: sans-serif;
   size: 24px; }
 
+/*SKILLSSSSS*/
+.box{
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.12);
+    opacity: 0.8;
+}
+
+.skills{
+    text-align: right;
+    padding-right: 5px;
+    line-height: 10px;
+    color: #ccc;
+    display: inline-block;
+}
+.html{width: 90%; background-color: #00ff3b;}
+.css{width: 80%;background-color: #00ff3b;}
+.javascript{width: 60%;background-color: #00ff3b;}
+.jquery{width: 60%;background-color: #00ff3b;}
+.sass{width: 75%;background-color: #00ff3b;}
+.mkt{width: 80%;background-color: #00ff3b;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*# sourceMappingURL=main.css.map */
