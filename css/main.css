@@ -13,7 +13,12 @@ h1 {
   font-family: sans-serif; }
 
 .navbar {
-  padding-bottom: 12px; }
+  padding-bottom: 7px; }
+.navbar-toggle{
+    padding-top: 15px;
+    background: #000;
+    border: none;
+}
 
 header {
   position: relative;
@@ -126,20 +131,6 @@ h4 {
   padding: 18px 20px;
   float: right; }
 
-.meSkills {
-  margin-top: 30px; }
-
-#nameSkills {
-  background: #e4e7e9;
-  padding: 10px;
-  border-left: 10px solid #e2a9a9;
-  margin-bottom: 60px;
-  margin-top: 60px; }
-
-figure {
-  margin: 0 0 20px;
-  text-align: center; }
-
 #portfolio {
   width: 100%; }
 
@@ -199,30 +190,80 @@ ul, li, a {
   size: 24px; }
 
 /*SKILLSSSSS*/
-.box{
-    box-sizing: border-box;
+#skillsHabil{
+   font-weight: bold;
+   color: #ccc;
+}
+.skillsImg{
+   background-image: url(https://snap-photos.s3.amazonaws.com/img-thumbs/960w/BF24DAFE14.jpg);
+   width: 100%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   opacity: 0.9;
+}
+
+.skills,
+.skills .skill,
+.skills .skill .skill-title,
+.skills .skill .skill-bar {
+   width: 100%;
+   float: left;
+}
+
+.skills .skill {
+   margin-bottom: 20px;
+}
+
+.skills .skill .skill-title {
+   color: #ccc;
+   margin-bottom: 8px;
+   font-weight: bold;
+   font-size: 14px;
+   
+}
+
+.skills .skill .skill-bar {
+   width: 0;
+   height: auto;
+   background: rgba(0, 0, 0, 0.1);
+   transition: 1s cubic-bezier(1, 0, .5, 1);
+   -webkit-transition: 1s cubic-bezier(1, 0, .5, 1);
+   -ms-transition: 1s cubic-bezier(1, 0, .5, 1);
+}
+
+.skills.active .skill .skill-bar {
+   width: 100%;
+}
+
+.skills .skill .skill-bar span {
+   float: left;
+   width: 0%;
+   background: #00ff3b;
+   height: 10px;
+   position: relative;
+   transition: 1s cubic-bezier(1, 0, .5, 1);
+   -webkit-transition: 1s cubic-bezier(1, 0, .5, 1);
+   -ms-transition: 1s cubic-bezier(1, 0, .5, 1);
+}
+
+.skills .skill .skill-bar span b {
+   float: left;
+   width: 100%;
+   position: relative;
+   text-align: right;
+   opacity: 0;
+   font-size: 14px;
+   color: rgba(255, 255, 255, 0);
+   font-weight: 400;
+   top: -13px;
+}
+
+#skillContenedor{
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.12);
-    opacity: 0.8;
+    max-width: 600px;
+    padding: 0 15px;
+    margin: auto;
 }
-
-.skills{
-    text-align: right;
-    padding-right: 5px;
-    line-height: 10px;
-    color: #ccc;
-    display: inline-block;
-}
-.html{width: 90%; background-color: #00ff3b;}
-.css{width: 80%;background-color: #00ff3b;}
-.javascript{width: 60%;background-color: #00ff3b;}
-.jquery{width: 60%;background-color: #00ff3b;}
-.sass{width: 75%;background-color: #00ff3b;}
-.mkt{width: 80%;background-color: #00ff3b;}
-
-
-
-
 
 
 

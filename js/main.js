@@ -48,32 +48,18 @@ function onClickAboutMe() {
 function onClickSkills() {
 	gotoSection('skills');
     
-    var options = {
-        percentageInnerCutout: 70,
-        animationEasing:'easeOutQuint',
-        animateScale:true
-    };
-    
-    var data ={
-       html_css: [
-    { value: 95, color: "hsl(120, 39%, 54%)" },
-    { value: 5, color: "hsl(120, 10%, 90%)" }
-  ],
-    };
-    
-    var offset = 0;
-        $.each(data, function(key, data) {
-            var canvas = document.querySelector('#' + key);
-            if(canvas) {
-                offset += 250;
-                setTimeout(function() {
-                    var ctx = canvas.getContext('2d');
-                    var chart = new Chart(ctx);
-                    chart.Doughnut(data, options);
-                }, offset);
-            }
-        });
-}
+  $(".skills").addClass("active")
+  $(".skills .skill .skill-bar span").each(function() {
+      $(this).animate({
+         "width": $(this).parent().attr("data-bar") + "%"
+      }, 1000);
+   $(this).append('<b>' + $(this).parent().attr("data-bar") + '%</b>');
+     });
+   
+     setTimeout(function() {
+     $(".skills .skill .skill-bar span b").animate({"opacity":"1"},1000);
+      }, 2000);
+ }
 
 function onClickPortfolio(){
 	gotoSection('portfolio');
