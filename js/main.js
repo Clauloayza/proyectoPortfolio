@@ -41,7 +41,7 @@ function onClickAboutMe() {
 }
 
 document.addEventListener('DOMContentLoaded',function(event){
-  var dataText = [ "CLAUDIA MARIEL LOAYZA MEDINA", "CLAUDIA MARIEL LOAYZA MEDINA", "CLAUDIA MARIEL LOAYZA MEDINA"];
+  var dataText = [ "CLAUDIA MARIEL LOAYZA MEDINA", "CLAUDIA MARIEL LOAYZA MEDINA", "CLAUDIA MARIEL LOAYZA MEDINA", "CLAUDIA MARIEL LOAYZA MEDINA", "CLAUDIA MARIEL LOAYZA MEDINA", "CLAUDIA MARIEL LOAYZA MEDINA"];
   
   function typeWriter(text, i, fnCallback) {
     if (i < (text.length)) {
