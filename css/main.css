@@ -71,25 +71,193 @@ h1 {
   font-family: sans-serif;
   margin-top: 30px;
   font-size: 20px; }
-span{
-    border-right: .05em solid;
-    animation: caret 1s steps (1) infinite;
-}
+
 @keyframes caret{
     50%{
         border-color: transparent;
     }
 }
 
-h5 {
-  display: inline-block;
-  margin-left: 10px;
-  font-size: 20px;
-  font-family: serif; }
+/*About me-mkt fe---------*/
+figure.snip0057 {
+  font-family:sans-serif;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 40px 1%;
+  height: 400px;
+  width: 100%;
+  background: #fff;
+  color: #000;
+}
+figure.snip0057 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+figure.snip0057 .image {
+  width: 50%;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-transform: skewX(-15deg);
+  transform: skewX(-15deg);
+}
+figure.snip0057 .image img {
+  height: 400px;
+  position: relative;
+  display: block;
+  left: 5%;
+  z-index: 1;
+  -webkit-transform: skew(5deg);
+  transform: skew(5deg);
+}
+figure.snip0057 figcaption {
+  padding: 20px 10px;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  width: 50%;
+}
+figure.snip0057 figcaption h2,
+figure.snip0057 figcaption p {
+  margin-right: 5px;
+  text-align: right;
+  padding: 10px 0;
+  width: 100%;
+  
+}
+figure.snip0057 figcaption h2 {
+  font-size: 112%;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+figure.snip0057 figcaption h2 span {
+  font-weight: 800;
+}
+figure.snip0057 figcaption p {
+  font-size: 85%;
+}
 
-.profetion {
-  margin-top: 100px; }
+figure.snip0057 .position {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  padding: 15px 30px;
+  font-size: 100%;
+  font-style: italic;
+  color: #fff;
+  background: rgba(226, 169, 169, 0.71);
+}
 
+figure.snip0057:hover figcaption,
+figure.snip0057.hover figcaption {
+  bottom: 40px;
+  background: #ccc;
+}
+
+/**/
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration : none;
+}
+
+.f {
+  font-size: 0.8em;
+  position: fixed;
+  top: 5px;
+  right: 10px;
+  color : #070707;
+}
+
+.f a {
+  color : #FFC6C6;
+}
+
+/* FOOTER */
+
+.Footer {
+  position : absolute;
+  top : 50%;
+  right : 50%;
+  transform:translateY( -80% );
+}
+
+.Footer::before {
+  content : '';
+  position : absolute;
+  bottom : 25%;
+  right : 0;
+  width : 300px;
+  height : 25%;
+  background-color : #FFC6C6;
+  animation : translate1 3000ms infinite;
+}
+
+.Footer-items {
+  width : 300px;
+  float : right;
+}
+.Footer-item {
+  display : inline-block;
+  width : 50px;
+  height : 50px;
+  text-align: center;
+}
+.Footer-link {
+  position : relative;
+  display: block;
+  width : 100%;
+  height : 100%;
+  opacity : 0;
+  animation : translate2 3000ms infinite;
+}
+.Footer-item:nth-child(2) .Footer-link {
+  animation-delay : ($3000ms/50);
+}
+.Footer-item:nth-child(3) .Footer-link {
+  animation-delay : (3000ms/50)*2;
+}
+.Footer-item:nth-child(4) .Footer-link {
+  animation-delay : (3000ms/50)*3;
+}
+.Footer-item:nth-child(5) .Footer-link {
+  animation-delay : (3000ms/50)*4;
+}
+
+.Footer-icon {
+  color : #070707;
+  position: absolute;
+  left : 50%;
+  top : 50%;
+  font-size : 1.6em;
+  transform : translate( -50%, -50% );
+  transition : 0.3s;
+
+}
+
+.Footer-link:hover {  
+    background:#FFC6C6; 
+    top : 30%;
+  }
+@keyframes translate1{
+  0% { opacity : 0; margin-right : -7%; }
+  20% { opacity : 1; margin-right : 0; }
+  65% { opacity : 1; margin-right : 0; }
+  85% { opacity : 0; margin-right : 10%; }
+  100% { opacity : 0; margin-right : 10%; }
+}
+@keyframes translate2{
+  2% { opacity : 0; margin-left : 175%; }
+  21% { opacity : 1; margin-left : 0%; }
+  64% { opacity : 1; margin-left : 0%; }
+  80% { opacity : 0; margin-left : -250%; }
+  100% { opacity : 0; margin-left : -250%; }
+}
+/**/
 #nexo {
   background: #cfd3d7; }
 
@@ -100,9 +268,6 @@ h4 {
 .glyphicon-plus {
   background: #c3c3c3;
   padding: 13px 25px; }
-
-#pAbout {
-  margin-bottom: 30px; }
 
 .corusel {
   width: 100%;
@@ -287,11 +452,129 @@ ul, li, a {
 /*PORTAFOLIO*/
 
 
-.sinpadding [class*="col-"]{
-    padding: 0;
+
+figure.effect-duke img,
+figure.effect-duke p {
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
 }
 
+figure.effect-duke:hover img {
+	opacity: 0.1;
+	-webkit-transform: scale3d(2,2,1);
+	transform: scale3d(2,2,1);
+}
 
+figure.effect-duke h2 {
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: scale3d(0.8,0.8,1);
+	transform: scale3d(0.8,0.8,1);
+	-webkit-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+}
+
+figure.effect-duke p {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 20px;
+	padding: 30px;
+	border: 2px solid #fff;
+	text-transform: none;
+	font-size: 100%;
+	opacity: 0;
+	-webkit-transform: scale3d(0.8,0.8,1);
+	transform: scale3d(0.8,0.8,1);
+	-webkit-transform-origin: 50% -100%;
+	transform-origin: 50% -100%;
+}
+
+figure.effect-duke:hover h2,
+figure.effect-duke:hover p {
+	opacity: 1;
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+}
+
+.grid figure {
+		display: inline-block;
+		float: none;
+		margin: 10px auto;
+		width: 100%;
+	}
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	font-size: 50px;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+    color: #fff;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 60%;
+}
+.grid figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	width: 48%;
+	height: auto;
+	background: rgba(163, 48, 119, 0.5);
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+}
+
+.grid figure figcaption {
+	padding: 15%;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 140%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.grid {
+	position: relative;
+	clear: both;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
 
 
 
