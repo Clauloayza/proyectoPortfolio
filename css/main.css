@@ -576,7 +576,18 @@ figure.effect-duke:hover p {
 	text-align: center;
 }
 
+/*Contact*/
+.contactImg{
+   background-image: url(../img/fondoAboutme.jpg);
+   width: 100%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
 
+.contactOscuro{
+    background: rgba(255, 255, 255, 0.72);
+}
 
 
 
